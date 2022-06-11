@@ -7,7 +7,7 @@
                     <img class="logo-image" src="{{ setting('app-logo', '') === '' ? url('/logo.png') : url(setting('app-logo', '')) }}" alt="Logo">
                 @endif
                 @if (setting('app-name-header'))
-                    <span class="logo-text">{{ setting('app-name') }}</span>
+                    <span class="logo-text">学易</span>
                 @endif
             </a>
             <button type="button"
