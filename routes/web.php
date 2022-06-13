@@ -32,6 +32,10 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 Route::get('/status', [StatusController::class, 'show']);
 Route::get('/robots.txt', [HomeController::class, 'robots']);
 
+Route::get('/test/', function() {
+    return view('test');
+});
+
 Route::get('/books/', [BookController::class, 'index']);
 Route::get('/books/{slug}', [BookController::class, 'show']);
 Route::get('/books/{bookSlug}/page/{pageSlug}', [PageController::class, 'show']);
