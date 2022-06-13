@@ -27,8 +27,7 @@
     @stack('translations')
 </head>
 <body class="@yield('body-class')">
-
-    @include('common.skip-to-content')
+    <a class="px-m py-s skip-to-content-link print-hidden" href="#main-content">{{ trans('common.skip_to_main_content') }}</a>
 
     @include('common.header')
 
