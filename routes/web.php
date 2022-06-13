@@ -44,6 +44,7 @@ Route::get('/shelves/{slug}', [BookshelfController::class, 'show']);
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/tags', [TagController::class, 'index']);
+Route::get('/books/{bookSlug}/chapter/{chapterSlug}', [ChapterController::class, 'show']);
 
 // Search
 Route::get('/search', [SearchController::class, 'search']);
@@ -123,7 +124,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/books/{bookSlug}/chapter/{chapterSlug}/create-guest-page', [PageController::class, 'createAsGuest']);
     Route::get('/books/{bookSlug}/create-chapter', [ChapterController::class, 'create']);
     Route::post('/books/{bookSlug}/create-chapter', [ChapterController::class, 'store']);
-    Route::get('/books/{bookSlug}/chapter/{chapterSlug}', [ChapterController::class, 'show']);
+    
     Route::put('/books/{bookSlug}/chapter/{chapterSlug}', [ChapterController::class, 'update']);
     Route::get('/books/{bookSlug}/chapter/{chapterSlug}/move', [ChapterController::class, 'showMove']);
     Route::put('/books/{bookSlug}/chapter/{chapterSlug}/move', [ChapterController::class, 'move']);
