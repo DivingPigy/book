@@ -131,7 +131,6 @@ class BookController extends Controller
             'current'           => $book,
             'bookChildren'      => $bookChildren,
             'bookParentShelves' => $bookParentShelves,
-            'activity'          => $activities->entityActivity($book, 20, 1),
         ]);
     }
 
