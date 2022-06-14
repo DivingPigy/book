@@ -26,7 +26,7 @@
         </div>
 
         <div class="book-content">
-            <p class="text-muted">{!! Str::limit($shelf->description, 30, '...')  !!}</p>
+            <p class="text-muted">{{ $shelf->description }}</p>
             @if(count($sortedVisibleShelfBooks) > 0)
                 @if($view === 'list')
                     <div class="entity-list">
