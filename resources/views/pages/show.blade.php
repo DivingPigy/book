@@ -64,7 +64,6 @@
 @section('right')
 
     <div class="actions mb-xl">
-        <h5>{{ trans('common.actions') }}</h5>
 
         <div class="icon-list text-primary">
 
