@@ -90,7 +90,9 @@
     </div>
 
     <div class="actions mb-xl">
-        <h5>{{ trans('common.actions') }}</h5>
+        @if(signedInUser())
+            <h5>{{ trans('common.actions') }}</h5>
+        @endif
         <div class="icon-list text-primary">
 
             @if(userCan('page-create', $chapter))
@@ -137,9 +139,6 @@
 
             @if(signedInUser())
                 @include('entities.favourite-action', ['entity' => $chapter])
-            @endif
-            @if(userCan('content-export'))
-                @include('entities.export-menu', ['entity' => $chapter])
             @endif
         </div>
     </div>
