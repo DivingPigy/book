@@ -65,7 +65,7 @@
     <div class="mb-xl">
         <h5>{{ trans('common.details') }}</h5>
         <div class="blended-links text-small text-muted">
-            @include('entities.meta', ['entity' => $chapter])
+            <!-- @include('entities.meta', ['entity' => $chapter]) -->
 
             @if($book->restricted)
                 <div class="active-restriction">
